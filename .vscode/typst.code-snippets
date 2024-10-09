@@ -1,0 +1,48 @@
+{
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"code": {
+		"prefix": "code",
+		"body": [
+			"#code(",
+				"```sh"
+				"$1"
+				"```"
+			")"
+		],
+	},
+	"figure": {
+		"prefix": "figure",
+		"body": [
+			"#figure(",
+				"image(\"$1\", width: 90%),",
+				"caption: [$2]",
+			") <fig:$3>"
+		],
+	},
+	"table": {
+		"prefix": "table",
+		"body": [
+			"#figure(",
+				"caption: [$1],",
+				"table(",
+					"columns: 3,",
+					"stroke: (none),",
+					"table.header(",
+						"",
+					"),",
+					"table.hline(),",
+					"",
+					"table.hline(),",
+				")",
+			") <tab:$2>"
+		],
+	},
+}
