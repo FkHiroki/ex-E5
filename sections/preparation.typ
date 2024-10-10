@@ -1,17 +1,41 @@
 // タイトル
 
-#align(center, text(18pt, "量子コンピューティング アニーリング レポート")) \
+#align(center, text(18pt, "E5 モンテカルロシミュレーション 予習課題")) \
 
 #align(right, text(12pt, "62217149 福原博樹"))
 
-// = [A1-1]
 
-//   $ E(s_1,s_2) = -J_(1,2) s_1 s_2 - h_1 s_1 - h_2 s_2, space s_i in {-1, 1} \
-//     E_("QUBO") = a_1 x_1 + a_2 x_2 + b_(1,2) x_1 x_2 + "const", space x in {0, 1} \
-//     x_i = (1 - s_i) / 2, space <=> space s_i = 1 - 2 x_i \ $
-//   $ E(x_1,x_2) &= -J_(1,2) (1 - 2 x_1) (1 - 2 x_2) - h_1 (1 - 2 x_1) - h_2 (1 - 2 x_2) \
-//     &= 2(J_(1,2) + h_1) x_1 + 2(J_(1,2) + h_2) x_2 - 4 J_(1,2) x_1 x_2 + "const" \
-//     therefore a_1 &= 2(J_(1,2) + h_1), space a_2 = 2(J_(1,2) + h_2), space b_(1,2) = -4 J_(1,2) \ $
+= 1. result.txt の内容
+\
+#import "@preview/codelst:2.0.0": sourcecode
 
-= [A2-2] 問題: 数独
+#sourcecode(
+  frame: block.with(
+    stroke: 1pt + gray,
+    inset: (x: 10pt, y: 5pt),
+    radius: 5pt,
+    fill: luma(96%)
+  )
+)[
+#raw(read("../figs/result.txt"))
+]
 
+
+
+
+= 2. 出力画像
+
+#figure(
+image("../figs/distrb-ave.png", width: 90%),
+caption: [課題(1) 平均のグラフ],
+) <fig:distrb-ave>
+
+#figure(
+image("../figs/distrb-var.png", width: 90%),
+caption: [課題(1) 分散のグラフ],
+) <fig:distrb-var>
+
+#figure(
+image("../figs/buffon.png", width: 90%),
+caption: [課題(2) $pi$ への収束の様子],
+) <fig:buffon>
