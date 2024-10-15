@@ -104,6 +104,15 @@
   show figure.where(kind: image): set figure(supplement: [図])
   show figure.where(kind: image): set figure.caption(position: bottom, separator: [: ])
 
+  show figure.where(kind: raw): set figure(supplement: [プログラム])
+  show figure.where(kind: raw): set figure.caption(position: top, separator: [: ])
+
+  show figure.where(kind: raw): it => [
+    #v(30pt)
+    #it
+    #v(30pt)
+  ]
+
   // Display the paper's title.
   // align(center, text(18pt, title, weight: "bold", font: gothic))
   // v(2em, weak: true)
